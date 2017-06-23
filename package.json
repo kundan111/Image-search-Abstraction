@@ -1,0 +1,26 @@
+{
+  "name": "image-search-abstraction",
+  "version": "1.0.0",
+  "description": "A Image search API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundan111/Image-search-Abstraction.git"
+  },
+  "author": "Kundan Ranjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kundan111/Image-search-Abstraction/issues"
+  },
+  "homepage": "https://github.com/kundan111/Image-search-Abstraction#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.8",
+    "node-bing-api": "^3.2.1"
+  }
+}
