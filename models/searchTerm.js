@@ -9,8 +9,7 @@ var searchTermSchema = new Schema(
   {
       searchVal: String,
       searchDate: Date
-
-  },
+    },
   {
     timestamps: true
 

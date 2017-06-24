@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/searchTerms");
 
 app.get("/api/recentsearches",function(req,res,next){
 
-    searchTerm.find({},function(err,data){
+        searchTerm.find({},function(err,data){
 
         res.json(data);
 
@@ -52,9 +52,24 @@ data.save(function(err){
 
 });
 
+var searchOffset;
+
+//does offset exist
+if(offset){
+  if(offset==1){
+    offset=0;
+    searchOffset=1;
+  }
+  else if (offset>1) {
+    searchOffset =offset+1;
+  }
+
+}
+
 bing.images(searchVal,{
 
-  top: 10
+  top: 10*searchOffset,
+  skip: (10*offset)
 
 },function(error,rez,body){
 
